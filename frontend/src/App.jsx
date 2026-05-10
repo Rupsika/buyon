@@ -10,10 +10,12 @@ import Login from "./pages/login";
 import PlaceOrder from "./pages/PlaceOrder";
 import Orders from "./pages/Orders";
 import Navbar from "./components/Navbar";
+import SearchBar from "./components/SearchBar";
 const App = () => {
   return (
     <div className="min-h-screen bg-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>

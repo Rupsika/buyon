@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Title from '../components/Title'
+import contactus from '../assets/contactus.png'
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -16,7 +17,6 @@ const Contact = () => {
       alert('Please fill in all fields')
       return
     }
-    // TODO: connect to backend / email service
     setSubmitted(true)
   }
 
@@ -30,28 +30,30 @@ const Contact = () => {
         <Title text1={'CONTACT'} text2={'US'} />
       </div>
 
-      <div className='flex flex-col md:flex-row gap-12 mb-20'>
+      <div className='flex flex-col md:flex-row gap-12 mb-20 items-start'>
 
         {/* Left — Store Info */}
-        <div className='md:w-1/2 flex flex-col gap-6 text-gray-600'>
-          <img
-            src='https://images.unsplash.com/photo-1423784346385-c1d4dac9893a?w=800&q=80'
-            alt='Our Store'
-            className='w-full object-cover rounded'
-          />
+        <div className='w-full md:w-1/2 flex flex-col gap-6 text-gray-600'>
+
+          <div className='w-full flex justify-center'>
+            <img
+              src={contactus}
+              alt='Contact Us'
+              className='w-auto max-w-full max-h-[400px] object-contain rounded-lg shadow-md'
+            />
+          </div>
 
           <div>
             <h3 className='text-black font-semibold text-lg mb-2'>Our Store</h3>
             <p className='text-sm leading-relaxed'>
-              123 Fashion Street, 4th Floor <br />
-              New York, NY 10001, USA
+              Hyderabad, Telangana, India
             </p>
           </div>
 
           <div>
             <h3 className='text-black font-semibold text-lg mb-2'>Get In Touch</h3>
-            <p className='text-sm'>Tel: +1 (800) 123-4567</p>
-            <p className='text-sm'>Email: support@yourstore.com</p>
+            <p className='text-sm'>Tel: +91 6281686161</p>
+            <p className='text-sm'>Email: rupsika11@gmail.com</p>
           </div>
 
           <div>
@@ -66,7 +68,7 @@ const Contact = () => {
         </div>
 
         {/* Right — Contact Form */}
-        <div className='md:w-1/2'>
+        <div className='w-full md:w-1/2'>
           <h3 className='text-black font-semibold text-lg mb-6'>Send Us a Message</h3>
 
           {submitted ? (
